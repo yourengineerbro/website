@@ -1,0 +1,137 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Flex direction for responsiveness */
+.text-section, .image-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure full width on all screen sizes */
+}
+
+/* Text section styles */
+.text-section {
+    order:1;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+}
+
+.text-section .info {
+    margin-bottom: 20px;
+}
+
+.text-section .social-links a {
+    margin: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Water splash image */
+.image-section {
+    order: 0; /* Ensure image comes first on mobile */
+}
+
+.image-section img {
+    width: 50%;
+    max-width: 400px; /* Prevent image from getting too large */
+    height: auto;
+    clip-path: circle(50%);
+    object-fit: cover;
+    background: none;
+}
+
+/* Responsive layout adjustments */
+.app-container {
+    flex-direction: column; /* Mobile-first design */
+}
+
+@media (min-width: 768px) {
+    .app-container {
+        flex-direction: row; /* Side by side on desktop */
+    }
+
+    .text-section {
+        order: 0; /* Text section first on desktop */
+    }
+
+    .image-section {
+        order: 1; /* Image section second on desktop */
+    }
+
+    .image-section img {
+        width: 60%;
+        max-width: 500px;
+        height: auto;
+    }
+}
+
+/* Social links */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.social-links .social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+/* Adjust icon spacing for better visuals */
+.social-links a img, .social-links a i {
+    margin: 5px;
+}
+
+
+  
+  .kalam-regular {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .rokkitt-regular {
+    font-family: "Rokkitt", serif;
+    font-optical-sizing: auto;
+    font-weight: 380;
+    font-style: normal;
+  }
+  .parkinsans-regular {
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 380;
+    font-style: normal;
+  }
